@@ -4,8 +4,6 @@
 #include "MainMenuState.hpp"
 #include <iostream>
 
-int frame_processati = 0;
-
 SplashScreenState::SplashScreenState(GameDataRef data) : _data(data) {}
 
 void SplashScreenState::Init() {

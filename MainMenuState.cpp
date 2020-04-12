@@ -5,7 +5,7 @@
 #include "MainMenuState.hpp"
 #include <sstream>
 #include "DEFINITIONS.hpp"
-
+#include "GameState.hpp"
 #include <iostream>
 
 
@@ -38,23 +38,12 @@ void MainMenuState::HandleInput() {
             case sf::Event::Closed:
                 _data->window.close();
                 break;
-
-            case sf::Event::KeyPressed:
-                switch(event.key.code) {
-                    case 0:
-                        _data->window.close();
-                        break;
-                    default:
-                        break;
-                }
-                break;
-            default:
-                break;
         }
 
         //Controllare il click
         if ( _data->input.IsSpriteClicked(_startButton, sf::Mouse::Left, _data->window) ) {
-            std::cout<< "Game Started !" << std::endl;
+            //std::cout<< "Game Started !" << std::endl;
+            _data->machine.AddState( StateRef( new GameState(_data)), true);
         }
     }
 }
