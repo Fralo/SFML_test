@@ -17,8 +17,23 @@ void SplashScreenState::HandleInput() {
     sf::Event event;
 
     while( _data->window.pollEvent( event )) {
-        if( sf::Event::Closed == event.type ) {
-            _data->window.close();
+
+        switch(event.type) {
+            case sf::Event::Closed:
+                _data->window.close();
+                break;
+
+            case sf::Event::KeyPressed:
+                switch(event.key.code) {
+                    case 0:
+                        _data->window.close();
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            default:
+                break;
         }
     }
 }
@@ -32,5 +47,5 @@ void SplashScreenState::Draw(float dt) {
     _data->window.clear();
     _data->window.draw( _background );
     _data->window.display();
-    std::cout << ++frame_processati << std::endl;
+    //std::cout << ++frame_processati << std::endl;
 }

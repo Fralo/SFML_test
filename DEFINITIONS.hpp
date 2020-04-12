@@ -4,7 +4,7 @@
 #define SCREEN_WIDTH 1024
 #define SCREEN_HEIGHT 512
 
-#define SPLASH_STATE_SHOW_TIME 5.0
+#define SPLASH_STATE_SHOW_TIME 15.0
 
 #define SPLASH_SCREEN_BACKGROUND_FILEPATH "../res/img/logo_unifi.png"
 
