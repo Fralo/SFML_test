@@ -11,7 +11,7 @@ public:
 
 
     void LoadTexture( std::string name, std::string fileName);
-    void LoadTexture( std::string name, std::string fileName, int xStart, int yStart, int width, int height);
+    //void LoadTexture( std::string name, std::string fileName, int xStart, int yStart, int width, int height);
     sf::Texture &GetTexture( std::string name );
 
     void LoadFont( std::string name, std::string fileName);
