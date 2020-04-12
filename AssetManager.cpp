@@ -1,9 +1,17 @@
 #include "AssetManager.hpp"
 
-void AssetManager::LoadTexture(std::string name, std::string fileName) {
 
+
+void AssetManager::LoadTexture(std::string name, std::string fileName) {
     sf::Texture tex;
     if( tex.loadFromFile(fileName) ) {
+        this->_textures[name] = tex;
+    }
+}
+void AssetManager::LoadTexture(std::string name, std::string fileName, int xStart, int yStart, int width, int height) {
+
+    sf::Texture tex;
+    if( tex.loadFromFile(fileName, sf::IntRect(xStart, yStart, width, height)) ) {
         this->_textures[name] = tex;
     }
 }
