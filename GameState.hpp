@@ -25,6 +25,7 @@ public:
 private:
     GameDataRef _data;
     sf::Sprite _background;
+    sf::Sprite omino;
 };
 
 

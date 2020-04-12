@@ -22,6 +22,6 @@ if(SFML_FOUND)
     message(STATUS "SFML_VERSION: ${SFML_VERSION}")
 endif()
 
-add_executable(SFML_explore main.cpp State.hpp StateMachine.cpp StateMachine.hpp AssetManager.cpp AssetManager.hpp InputManager.cpp InputManager.hpp Game.cpp Game.hpp SplashScreenState.cpp SplashScreenState.hpp DEFINITIONS.hpp MainMenuState.cpp MainMenuState.hpp GameState.cpp GameState.hpp)
+add_executable(SFML_explore main.cpp State.hpp StateMachine.cpp StateMachine.hpp AssetManager.cpp AssetManager.hpp InputManager.cpp InputManager.hpp Game.cpp Game.hpp SplashScreenState.cpp SplashScreenState.hpp DEFINITIONS.hpp MainMenuState.cpp MainMenuState.hpp GameState.cpp GameState.hpp Player.cpp Player.hpp)
 
 target_link_libraries (SFML_explore sfml-graphics sfml-window sfml-system)

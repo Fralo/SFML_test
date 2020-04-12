@@ -13,5 +13,6 @@
 #define START_BUTTON_PATH "../res/img/play_button.png"
 
 #define GAME_BACKGROUND_PATH "../res/img/game_back.png"
+#define OMINO "../res/img/omino.png"
 
 #endif //SFML_EXPLORE_DEFINITIONS_HPP
